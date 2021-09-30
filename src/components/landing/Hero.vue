@@ -91,8 +91,10 @@
       class="hero-video"
       loop
       muted
+      playsinline
       autoplay
       preload="auto"
+      poster="@/assets/images/hero_poster.jpg"
     >
       <source type="video/mp4" src="@/assets/video/hero_700kbps.mp4" />
       Your browser doesn't seem to support video playback. =(
