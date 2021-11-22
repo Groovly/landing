@@ -34,10 +34,10 @@
 
 <script lang="ts">
 import copy from '@/assets/copy/en/landing/HowItWorks.yml'
-import { ref, onMounted } from 'vue'
+import { defineComponent, ref, onMounted } from 'vue'
 import { onElementVisible } from '@/lib/IntersectionObserver'
 
-export default {
+export default defineComponent({
   name: 'HowItWorks',
   setup() {
     const howitworks_title = ref(null)
@@ -69,5 +69,5 @@ export default {
       howitworks_p3
     }
   }
-}
+})
 </script>

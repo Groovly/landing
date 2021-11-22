@@ -63,10 +63,10 @@
 import copy from '@/assets/copy/en/landing/CallToAction.yml'
 import config from '@/config.json'
 import Button from '@/components/Button.vue'
-import { computed, ref, onMounted } from 'vue'
+import { computed, defineComponent, ref, onMounted } from 'vue'
 import { onElementVisible } from '@/lib/IntersectionObserver'
 
-export default {
+export default defineComponent({
   name: 'CallToAction',
   components: { Button },
   setup() {
@@ -74,7 +74,7 @@ export default {
     const cta_footer = ref(null)
 
     const onContact = () => {
-      window.location = `mailto:${config.contact.address}?subject=${config.contact.subject}`
+      window.location.href = `mailto:${config.contact.address}?subject=${config.contact.subject}`
     }
 
     onMounted(() => {
@@ -92,5 +92,5 @@ export default {
       onContact
     }
   }
-}
+})
 </script>

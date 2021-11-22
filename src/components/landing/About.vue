@@ -34,10 +34,10 @@
 
 <script lang="ts">
 import copy from '@/assets/copy/en/landing/About.yml'
-import { ref, onMounted } from 'vue'
+import { defineComponent, ref, onMounted } from 'vue'
 import { onElementVisible } from '@/lib/IntersectionObserver'
 
-export default {
+export default defineComponent({
   name: 'About',
   setup() {
     const about_title = ref(null)
@@ -65,5 +65,5 @@ export default {
       about_p2
     }
   }
-}
+})
 </script>
