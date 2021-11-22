@@ -139,9 +139,9 @@
 import copy from '@/assets/copy/en/landing/Hero.yml'
 import config from '@/config.json'
 import Button from '@/components/Button.vue'
-import { onMounted, onBeforeUnmount } from 'vue'
+import { defineComponent, onMounted, onBeforeUnmount } from 'vue'
 
-export default {
+export default defineComponent({
   name: 'Hero',
   components: { Button },
   setup() {
@@ -152,7 +152,7 @@ export default {
     let timeoutId : number
 
     const onContact = () => {
-      window.location = `mailto:${config.contact.address}?subject=${config.contact.subject}`
+      window.location.href = `mailto:${config.contact.address}?subject=${config.contact.subject}`
     }
 
     const scrollTo = () => {
@@ -187,5 +187,5 @@ export default {
       onContact
     }
   }
-}
+})
 </script>
